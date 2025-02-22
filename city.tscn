@@ -1,0 +1,94 @@
+[gd_scene load_steps=21 format=3 uid="uid://bkb14ga8d2hnj"]
+
+[ext_resource type="PackedScene" uid="uid://cq17yfrtn6e16" path="res://neon-city/source/CITY.blend" id="1_srj0j"]
+[ext_resource type="Texture2D" uid="uid://bvs8n1c5gd02r" path="res://neon-city/textures/neon4.2.png" id="2_s8lo1"]
+[ext_resource type="Texture2D" uid="uid://djfc5vhj0nb5k" path="res://neon-city/textures/neon2.3.png" id="3_bb16a"]
+[ext_resource type="Texture2D" uid="uid://pleftccae1sg" path="res://neon-city/textures/window_test4.1.png" id="4_m38yp"]
+[ext_resource type="Texture2D" uid="uid://flnpac6ojlyx" path="res://neon-city/textures/lamp_color.png" id="5_gkins"]
+[ext_resource type="Texture2D" uid="uid://dfjie4mbf27jf" path="res://neon-city/textures/fence_None_color.png" id="6_x5cvt"]
+[ext_resource type="Texture2D" uid="uid://bhwp5qakjjoiy" path="res://neon-city/textures/building2__color.png" id="7_st3ou"]
+[ext_resource type="Texture2D" uid="uid://c4br1qpcmafba" path="res://neon-city/textures/color.png" id="8_mjdc1"]
+[ext_resource type="Texture2D" uid="uid://gr5qepvnaypy" path="res://neon-city/textures/1.png" id="9_or4so"]
+[ext_resource type="PackedScene" uid="uid://br4wvd7ghke4h" path="res://shotgun.tscn" id="10_a3yki"]
+[ext_resource type="PackedScene" uid="uid://dwn8mhs7xorl8" path="res://beer_can_01.tscn" id="11_8h2ob"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6ofd"]
+albedo_texture = ExtResource("2_s8lo1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6pgjk"]
+albedo_texture = ExtResource("3_bb16a")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6lub6"]
+albedo_texture = ExtResource("4_m38yp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wiy3n"]
+albedo_texture = ExtResource("5_gkins")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0e8xx"]
+albedo_texture = ExtResource("6_x5cvt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x14vm"]
+albedo_texture = ExtResource("7_st3ou")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d43ro"]
+albedo_texture = ExtResource("8_mjdc1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hdia4"]
+albedo_texture = ExtResource("7_st3ou")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s848c"]
+albedo_texture = ExtResource("9_or4so")
+
+[node name="CITY" instance=ExtResource("1_srj0j")]
+
+[node name="Plane_004" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_q6ofd")
+
+[node name="Plane_001" parent="." index="3"]
+material_override = SubResource("StandardMaterial3D_6pgjk")
+
+[node name="Plane" parent="." index="4"]
+material_override = SubResource("StandardMaterial3D_6lub6")
+
+[node name="BezierCurve_007" parent="." index="5"]
+material_override = SubResource("StandardMaterial3D_wiy3n")
+
+[node name="Cylinder_Cylinder_000" parent="." index="11"]
+material_override = SubResource("StandardMaterial3D_0e8xx")
+
+[node name="BezierCurve_001" parent="." index="16"]
+material_override = SubResource("StandardMaterial3D_x14vm")
+
+[node name="Cube_001_Cube_003" parent="." index="17"]
+material_override = SubResource("StandardMaterial3D_d43ro")
+
+[node name="BezierCurve_000" parent="." index="18"]
+material_override = SubResource("StandardMaterial3D_hdia4")
+
+[node name="BezierCurve_002" parent="." index="19"]
+material_override = SubResource("StandardMaterial3D_s848c")
+
+[node name="Shotgun" parent="." index="20" instance=ExtResource("10_a3yki")]
+transform = Transform3D(0.0412917, -0.0476907, -0.339184, 0.316242, -0.125925, 0.0562044, -0.131572, -0.317637, 0.0286438, 3.04684, 0.768819, 1.21475)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="21"]
+transform = Transform3D(0.996846, 0.0785698, -0.0111306, -0.0671495, 0.909934, 0.409282, 0.0422853, -0.407244, 0.91234, 2.7117, 1.73044, 3.10719)
+light_color = Color(1, 0.192157, 1, 1)
+light_energy = 17.446
+light_indirect_energy = 14.737
+shadow_enabled = true
+spot_range = 3.58861
+spot_angle = 16.4529
+
+[node name="Camera3D" type="Camera3D" parent="." index="22"]
+transform = Transform3D(0.956481, -0.165002, -0.240662, 0.169333, 0.985555, -0.00272243, 0.237634, -0.0381478, 0.970605, 2.4704, 0.346959, 2.1736)
+fov = 38.8123
+
+[node name="BeerCan01" parent="." index="23" instance=ExtResource("11_8h2ob")]
+transform = Transform3D(0.225, 0, 0, 0, 0.225, 0, 0, 0, 0.225, 2.75047, 0.114492, 0.880431)
+
+[node name="BeerCan02" parent="." index="24" instance=ExtResource("11_8h2ob")]
+transform = Transform3D(0.215, 0, 0, 0, 0.215, 0, 0, 0, 0.215, 2.67139, 0.122822, 0.918629)
+
+[node name="BeerCan03" parent="." index="25" instance=ExtResource("11_8h2ob")]
+transform = Transform3D(0.235, 0, 0, 0, 0.235, 0, 0, 0, 0.235, 2.70324, 0.265678, 0.894569)

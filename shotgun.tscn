@@ -1,0 +1,60 @@
+[gd_scene load_steps=12 format=3 uid="uid://br4wvd7ghke4h"]
+
+[ext_resource type="PackedScene" uid="uid://xi1r7mfnan6s" path="res://shotgun/source/Shotgun.fbx" id="1_28b32"]
+[ext_resource type="Texture2D" uid="uid://d2lsa6b8oyfg6" path="res://shotgun/textures/DefaultMaterial_BC.png" id="2_h0dgf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kw0hy"]
+albedo_texture = ExtResource("2_h0dgf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dtbvu"]
+albedo_texture = ExtResource("2_h0dgf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_csu0u"]
+albedo_texture = ExtResource("2_h0dgf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n8kfg"]
+albedo_texture = ExtResource("2_h0dgf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5pg44"]
+albedo_texture = ExtResource("2_h0dgf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s3vpf"]
+albedo_texture = ExtResource("2_h0dgf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lveww"]
+albedo_texture = ExtResource("2_h0dgf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8t2fw"]
+albedo_texture = ExtResource("2_h0dgf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0k8pw"]
+albedo_texture = ExtResource("2_h0dgf")
+
+[node name="Shotgun" instance=ExtResource("1_28b32")]
+
+[node name="StockWood_Lp" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_kw0hy")
+
+[node name="StockPlastic_Lp" parent="." index="1"]
+material_override = SubResource("StandardMaterial3D_dtbvu")
+
+[node name="Body_Lp" parent="." index="2"]
+material_override = SubResource("StandardMaterial3D_csu0u")
+
+[node name="Grip_Lp" parent="." index="3"]
+material_override = SubResource("StandardMaterial3D_n8kfg")
+
+[node name="BarrelPump_Lp" parent="." index="4"]
+material_override = SubResource("StandardMaterial3D_5pg44")
+
+[node name="BarrelHolder_Lp" parent="." index="5"]
+material_override = SubResource("StandardMaterial3D_s3vpf")
+
+[node name="EjectorTop_Lp" parent="." index="6"]
+material_override = SubResource("StandardMaterial3D_lveww")
+
+[node name="Triggerholder_Lp" parent="." index="7"]
+material_override = SubResource("StandardMaterial3D_8t2fw")
+
+[node name="Barrel_Lp" parent="." index="12"]
+material_override = SubResource("StandardMaterial3D_0k8pw")
