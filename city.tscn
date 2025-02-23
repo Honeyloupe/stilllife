@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bkb14ga8d2hnj"]
+[gd_scene load_steps=23 format=3 uid="uid://bkb14ga8d2hnj"]
 
 [ext_resource type="PackedScene" uid="uid://cq17yfrtn6e16" path="res://neon-city/source/CITY.blend" id="1_srj0j"]
 [ext_resource type="Texture2D" uid="uid://bvs8n1c5gd02r" path="res://neon-city/textures/neon4.2.png" id="2_s8lo1"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://gr5qepvnaypy" path="res://neon-city/textures/1.png" id="9_or4so"]
 [ext_resource type="PackedScene" uid="uid://br4wvd7ghke4h" path="res://shotgun.tscn" id="10_a3yki"]
 [ext_resource type="PackedScene" uid="uid://dwn8mhs7xorl8" path="res://beer_can_01.tscn" id="11_8h2ob"]
+[ext_resource type="PackedScene" uid="uid://x5u658a8v0to" path="res://cigarette-box/source/ciggrette_box.fbx" id="12_fkgao"]
+[ext_resource type="Texture2D" uid="uid://duspct3n6wphn" path="res://blood-splatter-transparent-png-1.png" id="13_itlh2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6ofd"]
 albedo_texture = ExtResource("2_s8lo1")
@@ -92,3 +94,26 @@ transform = Transform3D(0.215, 0, 0, 0, 0.215, 0, 0, 0, 0.215, 2.67139, 0.122822
 
 [node name="BeerCan03" parent="." index="25" instance=ExtResource("11_8h2ob")]
 transform = Transform3D(0.235, 0, 0, 0, 0.235, 0, 0, 0, 0.235, 2.70324, 0.265678, 0.894569)
+
+[node name="ciggrette_box" parent="." index="26" instance=ExtResource("12_fkgao")]
+transform = Transform3D(0.04, 0, 0, 0, 0.00364199, 0.0398339, 0, -0.0398339, 0.00364199, 2.84356, 0.13892, 0.804988)
+
+[node name="ciggrette_box2" parent="." index="27" instance=ExtResource("12_fkgao")]
+transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 2.61074, 0.124007, 0.576693)
+
+[node name="ciggrette_box3" parent="." index="28" instance=ExtResource("12_fkgao")]
+transform = Transform3D(-0.0392176, 0.00787275, 0, -8.09303e-05, -0.000403148, 0.0399979, 0.00787234, 0.0392155, 0.000411191, 2.56125, 0.158094, 0.805536)
+
+[node name="Decal" type="Decal" parent="." index="29"]
+transform = Transform3D(1, 0, 0, 0, -0.243987, 0.969778, 0, -0.969778, -0.243987, 2.79108, 1.06839, 0.722575)
+texture_albedo = ExtResource("13_itlh2")
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." index="30"]
+transform = Transform3D(0.0601253, 0, -0.998191, 0, 1, 0, 0.998191, 0, 0.0601253, 0, 0.670931, 1.82707)
+light_color = Color(0.160784, 0.294118, 1, 1)
+light_energy = 11.685
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." index="31"]
+transform = Transform3D(0.774536, 0, 0.63253, 0, 1, 0, -0.63253, 0, 0.774536, 3.80793, 0.988901, 2.32218)
+light_color = Color(1, 0.164706, 0, 1)
+light_energy = 1.808
