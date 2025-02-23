@@ -111,9 +111,9 @@ texture_albedo = ExtResource("13_itlh2")
 [node name="SpotLight3D2" type="SpotLight3D" parent="." index="30"]
 transform = Transform3D(0.0601253, 0, -0.998191, 0, 1, 0, 0.998191, 0, 0.0601253, 0, 0.670931, 1.82707)
 light_color = Color(0.160784, 0.294118, 1, 1)
-light_energy = 11.685
+light_energy = 4.089
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="." index="31"]
 transform = Transform3D(0.774536, 0, 0.63253, 0, 1, 0, -0.63253, 0, 0.774536, 3.80793, 0.988901, 2.32218)
 light_color = Color(1, 0.164706, 0, 1)
-light_energy = 1.808
+light_energy = 0.192
